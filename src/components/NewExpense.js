@@ -14,7 +14,8 @@ const NewExpense = (props) => {
 		
 	};
     const onChangeDate = (event) => {
-		setDate(event.target.value);
+		const date = new Date (event.target.value);
+		setDate(date);
 		
 	};
 
@@ -26,6 +27,7 @@ const NewExpense = (props) => {
             date:enterDate
         }
         console.log(expense);
+		props.onExpenseData(expense);
 	};
 
 	return (
