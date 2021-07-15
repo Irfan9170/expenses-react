@@ -39,7 +39,7 @@ function App() {
     <>
       <NewExpense onExpenseData={onExpenseData}/>
       {expenses.map( expense =>{ 
-        return <ExpenseItem title={expense.title} date={expense.date} price={expense.amount} />})}
+        return <ExpenseItem key={expense.id} title={expense.title} date={expense.date} price={expense.amount} />})}
     </>
   );
 }
